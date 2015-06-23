@@ -7,7 +7,12 @@ module.config(function ($routeProvider) {
         templateUrl: "/templates/topicsView.html"
     });
 
-    $routeProvider.otherwise("/");
+    $routeProvider.when("/newmessage", {
+        controller: "newTopicController",
+        templateUrl: "/templates/newTopicView.html"
+    });
+
+    $routeProvider.otherwise({ redirectTo: "/" });
 });
 
 module.controller("topicsController", function ($scope, $http) {
@@ -26,4 +31,25 @@ module.controller("topicsController", function ($scope, $http) {
         .then(function () {
             $scope.isBusy = false;
         });
+});
+
+module.controller("newTopicController", function ($scope, $http, $window) {
+    $scope.newTopic = {};
+
+    $scope.save = function () {
+        alert($scope.newTopic.title);
+    };
+
+    //$http.get("/api/v1/topics?includeReplies=true")
+    //    .then(function (result) {
+    //        // Success
+    //        angular.copy(result.data, $scope.data);
+    //    },
+    //    function () {
+    //        // Error
+    //        alert("could not load topics");
+    //    })
+    //    .then(function () {
+    //        $scope.isBusy = false;
+    //    });
 });
