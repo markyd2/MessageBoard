@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+<div class="col-md-12">
+    <div class="whity content">
+        <!-- Main Content Starts Here -->
+        <!-- Content should be encloased inside div with the class "posts" -->
+        <div class="posts">
+            <!-- Each entry should be enclosed inside div with the class "entry" -->
+            <div class="entry">
+                <div class="padd">
+                    <!-- Contact Page title -->
+                    <h2>Contact Us</h2>
+                    <!-- Contact Page Para -->
+                    <p>Fusce imperdiet, risus eget viverra faucibus, diam mi vestibulum libero, ut vestibulum tellus magna nec enim. Nunc dapibus varius interdum. Phasellus at lorem ut lectus fermentum convallis.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="padd">
+                            <div class="co-form">
+                                <form class="form-horizontal" method="post">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="name">Name</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" data-val="true" data-val-required="*">
+                                                <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="email">Email</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="email" placeholder="Email" name="email" data-val="true" data-val-required="*">
+                                                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="website">Website</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" data-val="true" data-val-required="*">
+                                                <span class="field-validation-valid" data-valmsg-for="website" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="comment">Message</label>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Message..." data-val="true" data-val-required="*"></textarea>
+                                                <span class="field-validation-valid" data-valmsg-for="comment" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">Send</button>
+                                                @if (ViewBag.MailSent != null && ViewBag.MailSent)
+                                                { 
+                                                    <div>Mail Sent!</div>
+                                                }
+                                                &nbsp;
+											 <button type="reset" class="btn btn-default">Reset</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="padd">
+                            <div class="caddress">
+                                <address>
+                                    <strong>Twitter, Inc.</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr>
+                                    (123) 456-7890.<br>
+                                    <br>
+                                    <strong>Full Name</strong><br>
+                                    <a href="mailto:#">first.last@gmail.com</a>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Google Map -->
+                <div class="gmap">
+                    <div class="padd">
+                        <!-- Goto Google maps and copy the embed code of your location. Replace the below embed code with your code. -->
+                        <iframe height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2233.729970412109!2d-3.2003399999999496!3d55.954052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c796c8fb3787%3A0xee9813d1ae8f01c4!2sMarkit!5e0!3m2!1sen!2sus!4v1434989888114"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Ends Here -->
+    </div>
+
+</div>
